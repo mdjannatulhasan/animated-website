@@ -1,0 +1,71 @@
+.test{
+    height: 20px;
+    width: 100px;
+    background: rgb(241, 112, 112);
+    position: relative;
+    overflow: hidden;
+}
+.test1{
+    opacity:1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    animation: out1 1s;
+}
+.test1{
+    color: red;
+}
+.test:hover .test1{
+    position: absolute;
+    animation: in1 1s;
+    top: 100%;
+}
+.test2{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 100%;
+    animation: out2 1s;
+}
+.test:hover .test2{
+    position: absolute;
+    animation: in2 1s;
+    bottom: 0;
+}
+.test2{
+    color: rgb(68, 0, 255);
+}
+@keyframes in1 {
+    from{
+        top:0;
+        visibility: visible;
+    }
+    to{
+        top:100%;
+        visibility: hidden;
+    }
+}
+@keyframes out1 {
+    from{
+        top:100%;
+    }
+    to{
+        top:0;
+    }
+}
+@keyframes in2 {
+    from{
+        bottom: 100%;
+    }
+    to{
+        bottom: 0;
+    }
+}
+@keyframes out2 {
+    from{
+        bottom: 0;
+    }
+    to{
+        bottom: 100%;
+    }
+}
